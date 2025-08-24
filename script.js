@@ -22,7 +22,7 @@ class Audora {
         if (!query || typeof query !== "string") return '';
 
         const results = this.fuse.search(query);
-        if (results.length === 0) return null;
+        if (results.length === 0) return '';
 
         if (options.format === "array") {
             return [...new Set(results.map(r => r.item))];
