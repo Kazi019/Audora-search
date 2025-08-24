@@ -19,7 +19,7 @@ class Audora {
     }
 
     search(query = "", options = { format: "single" }) {
-        if (!query || typeof query !== "string") return null;
+        if (!query || typeof query !== "string") return '';
 
         const results = this.fuse.search(query);
         if (results.length === 0) return null;
